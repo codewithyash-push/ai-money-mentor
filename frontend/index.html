@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Money Mentor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Sora:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-mark">AI</span>
+          <div>
+            <p class="eyebrow">Hackathon-ready personal finance demo</p>
+            <h1>AI Money Mentor</h1>
+          </div>
+        </div>
+        <span class="topbar-chip">Made for Indian users</span>
+      </header>
+
+      <main class="hero-grid">
+        <section class="hero-copy">
+          <p class="eyebrow">Simple financial wellness snapshot</p>
+          <h2>Understand how your salary, spending, and savings are shaping your money health.</h2>
+          <p class="hero-text">
+            Enter a few monthly numbers and get an instant score, SIP guidance, and practical next
+            steps. The experience is intentionally simple so it is easy to demo in a few minutes.
+          </p>
+
+          <div class="hero-points">
+            <article class="info-card">
+              <strong>Health score</strong>
+              <span>Easy 0-100 financial fitness signal</span>
+            </article>
+            <article class="info-card">
+              <strong>SIP guidance</strong>
+              <span>20%-30% salary investment suggestion</span>
+            </article>
+            <article class="info-card">
+              <strong>Tax nudge</strong>
+              <span>ELSS and 80C prompts when savings are tight</span>
+            </article>
+          </div>
+        </section>
+
+        <section class="analyzer-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Quick analysis</p>
+              <h3>Enter your monthly details</h3>
+            </div>
+            <span class="panel-chip">Demo mode</span>
+          </div>
+
+          <form id="mentorForm" class="mentor-form">
+            <label>
+              <span>Monthly salary</span>
+              <input
+                id="salary"
+                name="salary"
+                type="number"
+                min="1"
+                step="1"
+                value="85000"
+                placeholder="e.g. 85000"
+                required
+              />
+            </label>
+
+            <label>
+              <span>Monthly expenses</span>
+              <input
+                id="expenses"
+                name="expenses"
+                type="number"
+                min="0"
+                step="1"
+                value="42000"
+                placeholder="e.g. 42000"
+                required
+              />
+            </label>
+
+            <label>
+              <span>Current savings</span>
+              <input
+                id="currentSavings"
+                name="currentSavings"
+                type="number"
+                min="0"
+                step="1"
+                value="250000"
+                placeholder="e.g. 250000"
+                required
+              />
+            </label>
+
+            <label>
+              <span>Financial goal (optional)</span>
+              <input
+                id="financialGoal"
+                name="financialGoal"
+                type="text"
+                maxlength="120"
+                placeholder="e.g. Build an emergency fund / Europe trip / Buy a car"
+              />
+            </label>
+
+            <button id="analyzeButton" type="submit" class="primary-button">Analyze</button>
+            <p id="statusMessage" class="status-message">
+              Sample values are pre-filled so the app is demo-ready immediately.
+            </p>
+          </form>
+        </section>
+      </main>
+
+      <section id="resultsPanel" class="results hidden" aria-live="polite">
+        <article class="result-card score-card">
+          <p class="eyebrow">Financial health</p>
+          <div class="score-shell">
+            <div id="scoreBadge" class="score-badge">0</div>
+            <div>
+              <h3 id="healthHeadline">Run an analysis</h3>
+              <p id="healthMessage" class="support-copy">
+                We will calculate your savings rate, score, SIP guidance, and next steps.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <article class="result-card">
+          <p class="eyebrow">Core numbers</p>
+          <div class="metric-list">
+            <div class="metric-row">
+              <span>Savings rate</span>
+              <strong id="savingsRateValue">0%</strong>
+            </div>
+            <div class="metric-row">
+              <span>Monthly surplus</span>
+              <strong id="monthlySurplusValue">₹0</strong>
+            </div>
+            <div class="metric-row">
+              <span>Current savings cushion</span>
+              <strong id="savingsCushionValue">0 months</strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="result-card highlight-card">
+          <p class="eyebrow">SIP recommendation</p>
+          <h3 id="sipValue">₹0 / month</h3>
+          <p id="sipRange" class="support-copy">Suggested range: ₹0 to ₹0</p>
+          <p id="taxSuggestion" class="tip-banner">
+            Tax planning suggestions will appear after analysis.
+          </p>
+        </article>
+
+        <article class="result-card full-width">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Action plan</p>
+              <h3>What to do next</h3>
+            </div>
+          </div>
+          <ul id="tipsList" class="tips-list"></ul>
+        </article>
+      </section>
+    </div>
+
+    <script src="/script.js"></script>
+  </body>
+</html>

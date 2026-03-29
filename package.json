@@ -1,0 +1,19 @@
+{
+  "name": "ai-money-mentor",
+  "version": "1.0.0",
+  "description": "Simple hackathon-ready full-stack money guidance app for Indian users.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "hackathon",
+    "finance",
+    "express",
+    "india"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
