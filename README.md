@@ -82,7 +82,7 @@ Example response:
   },
   "taxSuggestion": "Use your surplus strategically: channel part of it into ELSS, PPF, or EPF top-ups to make better use of the Section 80C tax deduction.",
   "actionableTips": [
-    "Automate a monthly SIP between ₹17,000 and ₹25,500 to invest before discretionary spending starts.",
+    "Automate a monthly SIP between INR 17,000 and INR 25,500 to invest before discretionary spending starts.",
     "Your safety buffer exists, but keep growing it toward 6 months of expenses for better resilience.",
     "Create a named bucket for \"Build an emergency fund\" and route part of every monthly surplus into it so the goal stays visible and measurable."
   ]
